@@ -1,34 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import styled from 'styled-components';
+import { Text, Title } from './components';
+import { FlexBox, GlobalStyle } from './styles';
+
+const FlexBoxStyle = styled(FlexBox)`
+   height: 100vh;
+   width: 100vw;
+`;
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+   return (
+      <>
+         <GlobalStyle />
+         <FlexBoxStyle>
+            <Title>Hang Man 😥</Title>
+            <Text>
+               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ad fuga quasi voluptatum exercitationem
+               hic odio possimus, obcaecati excepturi id similique provident cumque corporis pariatur porro minus natus
+               sequi sed rem illo. Minima temporibus possimus cumque voluptate reprehenderit rerum nobis?
+            </Text>
+         </FlexBoxStyle>
+      </>
+   );
 }
 
-export default App
+export default App;
