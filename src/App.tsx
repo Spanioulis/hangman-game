@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { Text, Title } from './components';
+import { Button, Text, Title } from './components';
 import { dimensions, FlexBox, GlobalStyle } from './styles';
 import { letters } from './utils';
 
 const FlexBoxStyle = styled(FlexBox)`
    height: 100vh;
-   margin: 0rem 15rem;
+   margin: 0rem 18rem;
 
    /* @media (min-width: 992px) {
       margin: 0rem 5rem;
@@ -16,10 +16,12 @@ const FlexBoxStyle = styled(FlexBox)`
 `;
 
 function App() {
+   const handleClick = (e: any) => {
+      console.log(e.target.value);
+   };
    return (
       <>
          <GlobalStyle />
-         {console.log('letters', letters)}
          <FlexBoxStyle>
             <FlexBox>
                <Title>Hangman Game</Title>
@@ -27,7 +29,11 @@ function App() {
             </FlexBox>
             <FlexBox direction="row">
                {letters.map((letter) => {
-                  return <Text size={dimensions.font.h3}>{letter}</Text>;
+                  return (
+                     <Button value={letter} onClick={handleClick}>
+                        {letter}
+                     </Button>
+                  );
                })}
             </FlexBox>
          </FlexBoxStyle>
