@@ -13,8 +13,12 @@ const TitleStyle = styled.p<TitleProps>`
    font-weight: ${({ weight }) => weight || 'normal'};
 `;
 
-const Title: React.FC<TitleProps> = ({ children }) => {
-   return <TitleStyle>{children}</TitleStyle>;
+const Title: React.FC<TitleProps> = ({ children, color, size, weight }) => {
+   return (
+      <TitleStyle color={color} size={size} weight={weight}>
+         {children}
+      </TitleStyle>
+   );
 };
 
 export default Title;

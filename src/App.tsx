@@ -1,23 +1,35 @@
 import styled from 'styled-components';
 import { Text, Title } from './components';
-import { FlexBox, GlobalStyle } from './styles';
+import { dimensions, FlexBox, GlobalStyle } from './styles';
+import { letters } from './utils';
 
 const FlexBoxStyle = styled(FlexBox)`
    height: 100vh;
-   width: 100vw;
+   margin: 0rem 15rem;
+
+   /* @media (min-width: 992px) {
+      margin: 0rem 5rem;
+   }
+   @media (min-width: 1200px) {
+      margin: 0rem 15rem;
+   } */
 `;
 
 function App() {
    return (
       <>
          <GlobalStyle />
+         {console.log('letters', letters)}
          <FlexBoxStyle>
-            <Title>Hang Man 😥</Title>
-            <Text>
-               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ad fuga quasi voluptatum exercitationem
-               hic odio possimus, obcaecati excepturi id similique provident cumque corporis pariatur porro minus natus
-               sequi sed rem illo. Minima temporibus possimus cumque voluptate reprehenderit rerum nobis?
-            </Text>
+            <FlexBox>
+               <Title>Hangman Game</Title>
+               <img src="" alt="" />
+            </FlexBox>
+            <FlexBox direction="row">
+               {letters.map((letter) => {
+                  return <Text size={dimensions.font.h3}>{letter}</Text>;
+               })}
+            </FlexBox>
          </FlexBoxStyle>
       </>
    );

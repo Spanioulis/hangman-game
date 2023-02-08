@@ -4,7 +4,8 @@ interface FlexBoxProps {
    align?: string;
    justify?: string;
    direction?: string;
-   grow?: string;
+   gap?: string;
+   grow?: number;
    wrap?: string;
    w?: string;
    onClick?: () => void;
@@ -15,8 +16,9 @@ const FlexBox = styled.div<FlexBoxProps>`
    align-items: ${({ align }) => align || 'center'};
    justify-content: ${({ justify }) => justify || 'center'};
    flex-direction: ${({ direction }) => direction || 'column'};
-   /* flex-grow: ${({ grow }) => grow || 0};
-   flex-wrap: ${({ wrap }) => wrap || 'wrap'}; */
+   gap: ${({ gap }) => gap || '0.5rem'};
+   flex-grow: ${({ grow }) => grow || 0};
+   flex-wrap: ${({ wrap }) => wrap || 'wrap'};
 `;
 
 export default FlexBox;

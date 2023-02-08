@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../styles';
 
@@ -13,8 +14,12 @@ const TextStyle = styled.p<TextProps>`
    font-weight: ${({ weight }) => weight || 'normal'};
 `;
 
-const Text: React.FC<TextProps> = ({ children }) => {
-   return <TextStyle>{children}</TextStyle>;
+const Text: React.FC<TextProps> = ({ children, color, size, weight }) => {
+   return (
+      <TextStyle color={color} size={size} weight={weight}>
+         {children}
+      </TextStyle>
+   );
 };
 
 export default Text;
