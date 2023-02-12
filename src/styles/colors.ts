@@ -1,16 +1,16 @@
 export default {
-   background: '#FFFFFF',
-   stroke: 'black',
-   main: '#353535',
-   secondary: '#3C6E71',
+   // background: '#FFFFFF',
+   background: '#f2e8e3',
+   main: '#e7a127',
+   secondary: '#824d30',
    font: {
-      base: '#284B63',
-      logo: '#3C6E71',
-      title: '#284B63'
+      base: '#fac942',
+      logo: '#e7a127',
+      title: '#824d30'
    },
    button: {
-      background: '#284B63',
-      text: '#D9D9D9'
+      background: '#824d30',
+      text: '#f2e8e3'
    },
    shadow: {
       base: '0 2px 4px 0 rgba(0, 0, 0, 0.2)'

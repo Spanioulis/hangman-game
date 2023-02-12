@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Button, Text, Title } from './components';
+import useFetch from './hooks/useFetch';
 import { dimensions, FlexBox, GlobalStyle } from './styles';
 import { letters } from './utils';
 
@@ -15,22 +16,32 @@ const FlexBoxStyle = styled(FlexBox)`
    } */
 `;
 
+const URL = './db.json';
+
 function App() {
    const handleClick = (e: any) => {
       console.log(e.target.value);
    };
+
+   // TODO -> Crea 'spinner' para loading
+   const { loading, error, data } = useFetch();
+
+   if (data && data.length > 0) {
+      console.log('data', data[425]);
+   }
+
    return (
       <>
          <GlobalStyle />
          <FlexBoxStyle>
             <FlexBox>
-               <Title>Hangman Game</Title>
+               <Title size={dimensions.font.h1}>Hangman Game</Title>
                <img src="" alt="" />
             </FlexBox>
             <FlexBox direction="row">
                {letters.map((letter) => {
                   return (
-                     <Button value={letter} onClick={handleClick}>
+                     <Button value={letter} onClick={handleClick} key={letter}>
                         {letter}
                      </Button>
                   );
