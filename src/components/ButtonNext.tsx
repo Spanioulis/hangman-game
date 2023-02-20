@@ -15,7 +15,7 @@ const ButtonStyle = styled.button<ButtonProps>`
    color: ${colors.button.text};
    cursor: pointer;
    font-weight: bolder;
-   margin-top: 3rem;
+   margin-top: 1rem;
    padding: 10px 10px;
    text-align: center;
    text-decoration: none;

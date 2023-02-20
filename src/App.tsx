@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Button, ButtonNext, Text, Title } from './components';
+import { Button, ButtonNext, HangmanImage, Text, Title } from './components';
 import { useRandom } from './hooks';
 import useFetch from './hooks/useFetch';
 import { dimensions, FlexBox, GlobalStyle } from './styles';
-import { letters } from './utils';
+import { letters } from './helpers';
 
 interface MyState {
    value: string;
@@ -29,27 +29,34 @@ function App() {
    const { loading, error, data } = useFetch();
    const { randomIndex } = useRandom(data);
    const [word, setWord] = useState<MyState>({ value: '' });
-   const [emptyWord, setEmptyWord] = useState('');
+   const [currentLetter, setCurrentLetter] = useState('');
+   const [attempts, setAttempts] = useState(0);
+   console.log('currentLetter:', currentLetter);
+   const [newWord, setNewWord] = useState([]);
    const arrayWord = word.value.split('');
+   console.log('arrayWord:', arrayWord);
    const underscore = '__ ';
 
    const handleClick = (e: any) => {
-      console.log(e.target.value);
+      setCurrentLetter(e.target.value);
    };
 
    const handleNextWord = () => {
       // console.log('Próxima partida', data[randomIndex].value.length);
       setWord({ ...word, value: data[randomIndex].value });
+      setAttempts(0);
    };
+
+   useEffect(() => {
+      setAttempts(attempts + 1);
+   }, [currentLetter]);
 
    return (
       <>
          <GlobalStyle />
          <FlexBoxStyle>
-            <FlexBox>
-               <Title size={dimensions.font.h1}>Hangman Game</Title>
-               <img src="" alt="" />
-            </FlexBox>
+            <Title size={dimensions.font.h1}>Hangman Game</Title>
+            <HangmanImage number={attempts} />
             {loading ? (
                <p>cargando...</p>
             ) : (
@@ -57,13 +64,29 @@ function App() {
                   {word.value}
                </Text>
             )}
-            <FlexBox direction="row" margin="1rem 0rem 2rem 0rem">
-               {arrayWord.map((arr) => {
-                  return <span>{underscore}</span>;
+
+            <FlexBox direction="row" margin="1rem 0rem rem 0rem">
+               {/* TODO -> 'uuid4' */}
+               {arrayWord.map((arr, index) => {
+                  if (arr.toLowerCase() === currentLetter.toLowerCase()) {
+                     return <Text key={index}>{arr.toUpperCase()}</Text>;
+                  } else {
+                     return (
+                        <Text key={index} color="#121212">
+                           {underscore}
+                        </Text>
+                     );
+                  }
                })}
             </FlexBox>
 
-            <FlexBox direction="row">
+            <Text color="#121212" size={dimensions.font.h4} weight="semibold" margin="1rem 0rem 0rem 0rem">
+               Intentos: {attempts}
+            </Text>
+
+            {/* TODO -> Usar el componente 'Buttongroup.tsx' */}
+
+            <FlexBox direction="row" wrap="wrap" margin="1rem 0rem 0rem 0rem">
                {letters.map((letter) => {
                   return (
                      <Button value={letter} onClick={handleClick} key={letter}>
