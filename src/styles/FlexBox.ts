@@ -6,6 +6,7 @@ interface FlexBoxProps {
    direction?: string;
    gap?: string;
    grow?: number;
+   margin?: string;
    wrap?: string;
    w?: string;
    onClick?: () => void;
@@ -14,11 +15,12 @@ interface FlexBoxProps {
 const FlexBox = styled.div<FlexBoxProps>`
    display: flex;
    align-items: ${({ align }) => align || 'center'};
-   justify-content: ${({ justify }) => justify || 'center'};
    flex-direction: ${({ direction }) => direction || 'column'};
-   gap: ${({ gap }) => gap || '0.5rem'};
    flex-grow: ${({ grow }) => grow || 0};
    flex-wrap: ${({ wrap }) => wrap || 'wrap'};
+   margin: ${({ margin }) => margin || '0rem'};
+   gap: ${({ gap }) => gap || '0.5rem'};
+   justify-content: ${({ justify }) => justify || 'center'};
 `;
 
 export default FlexBox;
