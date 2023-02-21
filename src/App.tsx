@@ -6,20 +6,19 @@ import useFetch from './hooks/useFetch';
 import { dimensions, FlexBox, GlobalStyle } from './styles';
 import { letters } from './helpers';
 
-interface MyState {
-   value: string;
-}
-
 const FlexBoxStyle = styled(FlexBox)`
    height: 100vh;
    margin: 0rem 18rem;
 
-   /* @media (min-width: 992px) {
+   @media (min-width: 600px) {
+      margin: 0rem 2rem;
+   }
+   @media (min-width: 992px) {
       margin: 0rem 5rem;
    }
    @media (min-width: 1200px) {
       margin: 0rem 15rem;
-   } */
+   }
 `;
 
 const URL = './db.json';
@@ -28,28 +27,48 @@ function App() {
    // TODO -> Crea 'spinner' para loading
    const { loading, error, data } = useFetch();
    const { randomIndex } = useRandom(data);
-   const [word, setWord] = useState<MyState>({ value: '' });
+
+   const [word, setWord] = useState('');
    const [currentLetter, setCurrentLetter] = useState('');
    const [attempts, setAttempts] = useState(0);
-   console.log('currentLetter:', currentLetter);
-   const [newWord, setNewWord] = useState([]);
-   const arrayWord = word.value.split('');
-   console.log('arrayWord:', arrayWord);
-   const underscore = '__ ';
+   const [hiddenWord, setHiddenWord] = useState('');
 
    const handleClick = (e: any) => {
       setCurrentLetter(e.target.value);
+
+      if (hiddenWord.includes('_')) {
+         // TODO -> Aquí poner el sweeralert
+         console.log('sigue la partida...');
+      } else {
+         setAttempts(0);
+         handleNextWord();
+      }
    };
 
    const handleNextWord = () => {
-      // console.log('Próxima partida', data[randomIndex].value.length);
-      setWord({ ...word, value: data[randomIndex].value });
+      setWord(data[randomIndex].value);
       setAttempts(0);
    };
 
    useEffect(() => {
-      setAttempts(attempts + 1);
+      if (!word.includes(currentLetter.toLowerCase())) {
+         setAttempts(attempts + 1);
+      }
+
+      if (word && hiddenWord) {
+         const hiddenwordArray = hiddenWord.split(' ');
+         for (let i = 0; i < word.length; i++) {
+            if (word[i].toLowerCase() === currentLetter.toLowerCase()) {
+               hiddenwordArray[i] = currentLetter;
+            }
+         }
+         setHiddenWord(hiddenwordArray.join(' '));
+      }
    }, [currentLetter]);
+
+   useEffect(() => {
+      setHiddenWord('_ '.repeat(word.length));
+   }, [word]);
 
    return (
       <>
@@ -57,27 +76,14 @@ function App() {
          <FlexBoxStyle>
             <Title size={dimensions.font.h1}>Hangman Game</Title>
             <HangmanImage number={attempts} />
-            {loading ? (
-               <p>cargando...</p>
-            ) : (
-               <Text color="#121212" size={dimensions.font.h2} weight="bold">
-                  {word.value}
-               </Text>
-            )}
-
             <FlexBox direction="row" margin="1rem 0rem rem 0rem">
-               {/* TODO -> 'uuid4' */}
-               {arrayWord.map((arr, index) => {
-                  if (arr.toLowerCase() === currentLetter.toLowerCase()) {
-                     return <Text key={index}>{arr.toUpperCase()}</Text>;
-                  } else {
-                     return (
-                        <Text key={index} color="#121212">
-                           {underscore}
-                        </Text>
-                     );
-                  }
-               })}
+               {loading ? (
+                  <p>cargando...</p>
+               ) : (
+                  <Text color="#121212" size={dimensions.font.h3} weight="bold">
+                     {hiddenWord}
+                  </Text>
+               )}
             </FlexBox>
 
             <Text color="#121212" size={dimensions.font.h4} weight="semibold" margin="1rem 0rem 0rem 0rem">

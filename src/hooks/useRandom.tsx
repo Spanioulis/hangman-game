@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
-interface useRandomProps {
-   // arr: string[];
+interface Props {
    length: number;
 }
 
-const useRandom = (arr: string[]) => {
+const useRandom = (arr: any) => {
    // const [random, setRandom] = useState();
 
    let randomIndex = Math.floor(Math.random() * arr.length);
