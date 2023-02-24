@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Button, ButtonNext, HangmanImage, Text, Title } from './components';
+import { Button, ButtonNext, HangmanImage, Spinner, Text, Title } from './components';
 import { useRandom } from './hooks';
 import useFetch from './hooks/useFetch';
 import { dimensions, FlexBox, GlobalStyle } from './styles';
@@ -83,7 +83,7 @@ function App() {
             <HangmanImage number={attempts} />
             <TextStyle direction="row" margin="1rem 0rem rem 0rem">
                {loading ? (
-                  <p>cargando...</p>
+                  <Spinner />
                ) : (
                   <Text color="#121212" size={dimensions.font.h3} weight="bold">
                      {hiddenWord}
