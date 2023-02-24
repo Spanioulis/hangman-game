@@ -10,6 +10,9 @@ const FlexBoxStyle = styled(FlexBox)`
    height: 100vh;
    margin: 0rem 18rem;
 
+   @media (max-width: 600px) {
+      margin: 0rem 1rem;
+   }
    @media (min-width: 600px) {
       margin: 0rem 2rem;
    }
@@ -21,17 +24,19 @@ const FlexBoxStyle = styled(FlexBox)`
    }
 `;
 
-const URL = './db.json';
+const TextStyle = styled(FlexBox)`
+   height: 2rem;
+`;
 
+const url = '../public/db.json';
 function App() {
-   // TODO -> Crea 'spinner' para loading
-   const { loading, error, data } = useFetch();
+   const { loading, data } = useFetch(url);
    const { randomIndex } = useRandom(data);
 
    const [word, setWord] = useState('');
    const [currentLetter, setCurrentLetter] = useState('');
    const [attempts, setAttempts] = useState(0);
-   const [hiddenWord, setHiddenWord] = useState('');
+   const [hiddenWord, setHiddenWord] = useState(' ');
 
    const handleClick = (e: any) => {
       setCurrentLetter(e.target.value);
@@ -76,7 +81,7 @@ function App() {
          <FlexBoxStyle>
             <Title size={dimensions.font.h1}>Hangman Game</Title>
             <HangmanImage number={attempts} />
-            <FlexBox direction="row" margin="1rem 0rem rem 0rem">
+            <TextStyle direction="row" margin="1rem 0rem rem 0rem">
                {loading ? (
                   <p>cargando...</p>
                ) : (
@@ -84,9 +89,9 @@ function App() {
                      {hiddenWord}
                   </Text>
                )}
-            </FlexBox>
+            </TextStyle>
 
-            <Text color="#121212" size={dimensions.font.h4} weight="semibold" margin="1rem 0rem 0rem 0rem">
+            <Text color="#121212" size={dimensions.font.h5} weight="semibold" margin="1rem 0rem 0rem 0rem">
                Intentos: {attempts}
             </Text>
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const useFetch = () => {
+const useFetch = (url: string) => {
    const [data, setData] = useState([{ id: '', value: '' }]);
    const [loading, setLoading] = useState(false);
    const [error, setError] = useState(null);
@@ -9,7 +9,7 @@ const useFetch = () => {
       setLoading(true);
       setError(null);
 
-      fetch('../public/db.json')
+      fetch(url)
          .then((res) => res.json())
          .then((data) => {
             setData(data);

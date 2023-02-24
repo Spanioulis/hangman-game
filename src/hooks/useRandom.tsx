@@ -5,8 +5,6 @@ interface Props {
 }
 
 const useRandom = (arr: any) => {
-   // const [random, setRandom] = useState();
-
    let randomIndex = Math.floor(Math.random() * arr.length);
    return { randomIndex };
 };
