@@ -10,7 +10,7 @@ interface ButtonGroupProps {
 
 const Buttongroup: React.FC<ButtonGroupProps> = ({ setCurrentLetter }) => {
    const handleClick = (value: string) => {
-      setCurrentLetter(value);
+      setCurrentLetter();
    };
 
    return (
