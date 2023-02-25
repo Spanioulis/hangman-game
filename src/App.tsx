@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Button, ButtonNext, HangmanImage, Spinner, Text, Title } from './components';
-import { useRandom } from './hooks';
-import useFetch from './hooks/useFetch';
-import { dimensions, FlexBox, GlobalStyle } from './styles';
+import { useFetch, useRandom } from './hooks';
 import { letters } from './helpers';
+
+import { dimensions, FlexBox, GlobalStyle } from './styles';
+import Swal from 'sweetalert2';
 
 const FlexBoxStyle = styled(FlexBox)`
    height: 100vh;
@@ -36,15 +37,12 @@ function App() {
    const [word, setWord] = useState('');
    const [currentLetter, setCurrentLetter] = useState('');
    const [attempts, setAttempts] = useState(0);
-   const [hiddenWord, setHiddenWord] = useState(' ');
+   const [hiddenWord, setHiddenWord] = useState('');
 
    const handleClick = (e: any) => {
       setCurrentLetter(e.target.value);
 
-      if (hiddenWord.includes('_')) {
-         // TODO -> Aquí poner el sweeralert
-         console.log('sigue la partida...');
-      } else {
+      if (!hiddenWord.includes('_')) {
          setAttempts(0);
          handleNextWord();
       }
@@ -52,6 +50,7 @@ function App() {
 
    const handleNextWord = () => {
       setWord(data[randomIndex].value);
+      setCurrentLetter('');
       setAttempts(0);
    };
 
@@ -69,11 +68,37 @@ function App() {
          }
          setHiddenWord(hiddenwordArray.join(' '));
       }
-   }, [currentLetter]);
+   }, [currentLetter, hiddenWord]);
+
+   useEffect(() => {
+      if (attempts === 9) {
+         Swal.fire({
+            title: '¡Lo siento, no has ganado! 😥',
+            icon: 'warning',
+            showConfirmButton: false,
+            timer: 2500
+         });
+         handleNextWord();
+      }
+   }, [attempts]);
 
    useEffect(() => {
       setHiddenWord('_ '.repeat(word.length));
    }, [word]);
+
+   useEffect(() => {
+      if (hiddenWord && hiddenWord.length > 0) {
+         if (!hiddenWord.includes('_ ')) {
+            Swal.fire({
+               position: 'center',
+               icon: 'success',
+               title: '!Enhorabuena, has ganado! 🎉',
+               showConfirmButton: false,
+               timer: 3500
+            });
+         }
+      }
+   }, [hiddenWord]);
 
    return (
       <>

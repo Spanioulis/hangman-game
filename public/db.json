@@ -13,7 +13,7 @@
    },
    {
       "id": "4",
-      "value": "ácido"
+      "value": "acido"
    },
    {
       "id": "5",
@@ -21,7 +21,7 @@
    },
    {
       "id": "6",
-      "value": "agrupación"
+      "value": "agrupacion"
    },
    {
       "id": "7",
@@ -41,15 +41,15 @@
    },
    {
       "id": "11",
-      "value": "álamo"
+      "value": "alamo"
    },
    {
       "id": "12",
-      "value": "alegría"
+      "value": "alegria"
    },
    {
       "id": "13",
-      "value": "alevín"
+      "value": "alevin"
    },
    {
       "id": "14",
@@ -73,7 +73,7 @@
    },
    {
       "id": "19",
-      "value": "ambición"
+      "value": "ambicion"
    },
    {
       "id": "20",
@@ -109,7 +109,7 @@
    },
    {
       "id": "28",
-      "value": "antipatía"
+      "value": "antipatia"
    },
    {
       "id": "29",
@@ -121,11 +121,11 @@
    },
    {
       "id": "31",
-      "value": "ápice"
+      "value": "apice"
    },
    {
       "id": "32",
-      "value": "árbol"
+      "value": "arbol"
    },
    {
       "id": "33",
@@ -165,7 +165,7 @@
    },
    {
       "id": "42",
-      "value": "balón"
+      "value": "balon"
    },
    {
       "id": "43",
@@ -217,7 +217,7 @@
    },
    {
       "id": "55",
-      "value": "bibliografía"
+      "value": "bibliografia"
    },
    {
       "id": "56",
@@ -241,7 +241,7 @@
    },
    {
       "id": "61",
-      "value": "budín"
+      "value": "budin"
    },
    {
       "id": "62",
@@ -273,11 +273,7 @@
    },
    {
       "id": "69",
-      "value": "canción"
-   },
-   {
-      "id": "70",
-      "value": "canción"
+      "value": "cancion"
    },
    {
       "id": "71",
@@ -313,7 +309,7 @@
    },
    {
       "id": "79",
-      "value": "caserío"
+      "value": "caserio"
    },
    {
       "id": "80",
@@ -333,7 +329,7 @@
    },
    {
       "id": "84",
-      "value": "chiquillería"
+      "value": "chiquilleria"
    },
    {
       "id": "85",
@@ -345,7 +341,7 @@
    },
    {
       "id": "87",
-      "value": "ciudadanía"
+      "value": "ciudadania"
    },
    {
       "id": "88",
@@ -365,7 +361,7 @@
    },
    {
       "id": "92",
-      "value": "clérigo"
+      "value": "clerigo"
    },
    {
       "id": "93",
@@ -385,7 +381,7 @@
    },
    {
       "id": "97",
-      "value": "colección"
+      "value": "coleccion"
    },
    {
       "id": "98",
@@ -393,7 +389,7 @@
    },
    {
       "id": "99",
-      "value": "cólera"
+      "value": "colera"
    },
    {
       "id": "100",
@@ -413,7 +409,7 @@
    },
    {
       "id": "104",
-      "value": "constelación"
+      "value": "constelacion"
    },
    {
       "id": "105",
@@ -433,7 +429,7 @@
    },
    {
       "id": "109",
-      "value": "cooperación"
+      "value": "cooperacion"
    },
    {
       "id": "110",
@@ -489,7 +485,7 @@
    },
    {
       "id": "123",
-      "value": "delegación"
+      "value": "delegacion"
    },
    {
       "id": "124",
@@ -525,11 +521,11 @@
    },
    {
       "id": "132",
-      "value": "documentación"
+      "value": "documentacion"
    },
    {
       "id": "133",
-      "value": "dragón"
+      "value": "dragon"
    },
    {
       "id": "134",
@@ -549,7 +545,7 @@
    },
    {
       "id": "138",
-      "value": "empatía"
+      "value": "empatia"
    },
    {
       "id": "139",
@@ -585,7 +581,7 @@
    },
    {
       "id": "147",
-      "value": "escuadrón"
+      "value": "escuadron"
    },
    {
       "id": "148",
@@ -597,10 +593,6 @@
    },
    {
       "id": "150",
-      "value": "estrella"
-   },
-   {
-      "id": "151",
       "value": "estrella"
    },
    {
@@ -621,7 +613,7 @@
    },
    {
       "id": "156",
-      "value": "éter"
+      "value": "eter"
    },
    {
       "id": "157",
@@ -629,7 +621,7 @@
    },
    {
       "id": "158",
-      "value": "excursión"
+      "value": "excursion"
    },
    {
       "id": "159",
@@ -684,10 +676,6 @@
       "value": "flor"
    },
    {
-      "id": "172",
-      "value": "flor"
-   },
-   {
       "id": "173",
       "value": "flota"
    },
@@ -697,7 +685,7 @@
    },
    {
       "id": "175",
-      "value": "fotografía"
+      "value": "fotografia"
    },
    {
       "id": "176",
@@ -709,7 +697,7 @@
    },
    {
       "id": "178",
-      "value": "fusilería"
+      "value": "fusileria"
    },
    {
       "id": "179",
@@ -733,14 +721,10 @@
    },
    {
       "id": "184",
-      "value": "gaterío"
+      "value": "gaterio"
    },
    {
       "id": "185",
-      "value": "gato"
-   },
-   {
-      "id": "186",
       "value": "gato"
    },
    {
@@ -753,10 +737,6 @@
    },
    {
       "id": "189",
-      "value": "gota"
-   },
-   {
-      "id": "190",
       "value": "gota"
    },
    {
@@ -785,7 +765,7 @@
    },
    {
       "id": "197",
-      "value": "habitación"
+      "value": "habitacion"
    },
    {
       "id": "198",
@@ -797,7 +777,7 @@
    },
    {
       "id": "200",
-      "value": "harén"
+      "value": "haren"
    },
    {
       "id": "201",
@@ -832,19 +812,11 @@
       "value": "hoja"
    },
    {
-      "id": "209",
-      "value": "hoja"
-   },
-   {
       "id": "210",
       "value": "honradez"
    },
    {
       "id": "211",
-      "value": "hora"
-   },
-   {
-      "id": "212",
       "value": "hora"
    },
    {
@@ -913,7 +885,7 @@
    },
    {
       "id": "229",
-      "value": "jauría"
+      "value": "jauria"
    },
    {
       "id": "230",
@@ -949,7 +921,7 @@
    },
    {
       "id": "238",
-      "value": "lámina"
+      "value": "lamina"
    },
    {
       "id": "239",
@@ -973,26 +945,18 @@
    },
    {
       "id": "244",
-      "value": "lejanía"
+      "value": "lejania"
    },
    {
       "id": "245",
       "value": "letra"
    },
    {
-      "id": "246",
-      "value": "letra"
-   },
-   {
       "id": "247",
-      "value": "léxico"
+      "value": "lexico"
    },
    {
       "id": "248",
-      "value": "libro"
-   },
-   {
-      "id": "249",
       "value": "libro"
    },
    {
@@ -1049,7 +1013,7 @@
    },
    {
       "id": "263",
-      "value": "maestría"
+      "value": "maestria"
    },
    {
       "id": "264",
@@ -1057,7 +1021,7 @@
    },
    {
       "id": "265",
-      "value": "maíz"
+      "value": "maiz"
    },
    {
       "id": "266",
@@ -1081,7 +1045,7 @@
    },
    {
       "id": "271",
-      "value": "máquina"
+      "value": "maquina"
    },
    {
       "id": "272",
@@ -1105,7 +1069,7 @@
    },
    {
       "id": "277",
-      "value": "milímetro"
+      "value": "milimetro"
    },
    {
       "id": "278",
@@ -1137,7 +1101,7 @@
    },
    {
       "id": "285",
-      "value": "monóxido"
+      "value": "monoxido"
    },
    {
       "id": "286",
@@ -1165,7 +1129,7 @@
    },
    {
       "id": "293",
-      "value": "mujerío"
+      "value": "mujerio"
    },
    {
       "id": "294",
@@ -1177,7 +1141,7 @@
    },
    {
       "id": "296",
-      "value": "músico"
+      "value": "musico"
    },
    {
       "id": "297",
@@ -1185,7 +1149,7 @@
    },
    {
       "id": "298",
-      "value": "navío"
+      "value": "navio"
    },
    {
       "id": "299",
@@ -1193,7 +1157,7 @@
    },
    {
       "id": "300",
-      "value": "neumático"
+      "value": "neumatico"
    },
    {
       "id": "302",
@@ -1249,7 +1213,7 @@
    },
    {
       "id": "318",
-      "value": "óboe"
+      "value": "oboe"
    },
    {
       "id": "319",
@@ -1281,7 +1245,7 @@
    },
    {
       "id": "327",
-      "value": "oxígeno"
+      "value": "oxigeno"
    },
    {
       "id": "328",
@@ -1293,7 +1257,7 @@
    },
    {
       "id": "330",
-      "value": "pájaro"
+      "value": "pajaro"
    },
    {
       "id": "331",
@@ -1325,7 +1289,7 @@
    },
    {
       "id": "339",
-      "value": "pedantería"
+      "value": "pedanteria"
    },
    {
       "id": "340",
@@ -1369,7 +1333,7 @@
    },
    {
       "id": "350",
-      "value": "perlería"
+      "value": "perleria"
    },
    {
       "id": "351",
@@ -1425,11 +1389,11 @@
    },
    {
       "id": "366",
-      "value": "plantación"
+      "value": "plantacion"
    },
    {
       "id": "368",
-      "value": "plátano"
+      "value": "platano"
    },
    {
       "id": "369",
@@ -1469,7 +1433,7 @@
    },
    {
       "id": "378",
-      "value": "porción"
+      "value": "porcion"
    },
    {
       "id": "380",
@@ -1477,11 +1441,11 @@
    },
    {
       "id": "381",
-      "value": "pradería"
+      "value": "praderia"
    },
    {
       "id": "382",
-      "value": "prisión"
+      "value": "prision"
    },
    {
       "id": "383",
@@ -1489,7 +1453,7 @@
    },
    {
       "id": "384",
-      "value": "problemática"
+      "value": "problematica"
    },
    {
       "id": "385",
@@ -1501,7 +1465,7 @@
    },
    {
       "id": "387",
-      "value": "público"
+      "value": "publico"
    },
    {
       "id": "388",
@@ -1561,7 +1525,7 @@
    },
    {
       "id": "403",
-      "value": "ranchería"
+      "value": "rancheria"
    },
    {
       "id": "404",
@@ -1573,7 +1537,7 @@
    },
    {
       "id": "406",
-      "value": "ratón"
+      "value": "raton"
    },
    {
       "id": "407",
@@ -1621,15 +1585,15 @@
    },
    {
       "id": "418",
-      "value": "reunión"
+      "value": "reunion"
    },
    {
       "id": "419",
-      "value": "reunión"
+      "value": "reunion"
    },
    {
       "id": "420",
-      "value": "río"
+      "value": "rio"
    },
    {
       "id": "421",
@@ -1673,7 +1637,7 @@
    },
    {
       "id": "431",
-      "value": "sabiduría"
+      "value": "sabiduria"
    },
    {
       "id": "432",
@@ -1693,7 +1657,7 @@
    },
    {
       "id": "436",
-      "value": "sembradío"
+      "value": "sembradio"
    },
    {
       "id": "437",
@@ -1701,7 +1665,7 @@
    },
    {
       "id": "438",
-      "value": "séquito"
+      "value": "sequito"
    },
    {
       "id": "439",
@@ -1717,7 +1681,7 @@
    },
    {
       "id": "442",
-      "value": "simpatía"
+      "value": "simpatia"
    },
    {
       "id": "443",
@@ -1737,7 +1701,7 @@
    },
    {
       "id": "447",
-      "value": "súbdito"
+      "value": "subdito"
    },
    {
       "id": "448",
@@ -1745,7 +1709,7 @@
    },
    {
       "id": "449",
-      "value": "sucesión"
+      "value": "sucesion"
    },
    {
       "id": "450",
@@ -1761,7 +1725,7 @@
    },
    {
       "id": "453",
-      "value": "tablón"
+      "value": "tablon"
    },
    {
       "id": "454",
@@ -1793,7 +1757,7 @@
    },
    {
       "id": "461",
-      "value": "término"
+      "value": "termino"
    },
    {
       "id": "462",
@@ -1805,7 +1769,7 @@
    },
    {
       "id": "464",
-      "value": "terrón"
+      "value": "terron"
    },
    {
       "id": "465",
@@ -1844,16 +1808,12 @@
       "value": "tranquilidad"
    },
    {
-      "id": "474",
-      "value": "tranquilidad"
-   },
-   {
       "id": "475",
       "value": "tribu"
    },
    {
       "id": "476",
-      "value": "trío"
+      "value": "trio"
    },
    {
       "id": "477",
@@ -1896,10 +1856,6 @@
       "value": "unicornio"
    },
    {
-      "id": "487",
-      "value": "unicornio"
-   },
-   {
       "id": "488",
       "value": "unisonancia"
    },
@@ -1912,12 +1868,8 @@
       "value": "uña"
    },
    {
-      "id": "491",
-      "value": "uña"
-   },
-   {
       "id": "492",
-      "value": "utilería"
+      "value": "utileria"
    },
    {
       "id": "493",
@@ -1941,7 +1893,7 @@
    },
    {
       "id": "498",
-      "value": "valentía"
+      "value": "valentia"
    },
    {
       "id": "499",
@@ -2016,15 +1968,7 @@
       "value": "yeguada"
    },
    {
-      "id": "517",
-      "value": "yegüería"
-   },
-   {
       "id": "518",
-      "value": "yunta"
-   },
-   {
-      "id": "519",
       "value": "yunta"
    },
    {
@@ -2033,7 +1977,7 @@
    },
    {
       "id": "521",
-      "value": "zócalo"
+      "value": "zocalo"
    },
    {
       "id": "522",
