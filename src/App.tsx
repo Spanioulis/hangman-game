@@ -90,9 +90,8 @@ function App() {
       if (hiddenWord && hiddenWord.length > 0) {
          if (!hiddenWord.includes('_ ')) {
             Swal.fire({
-               position: 'center',
-               icon: 'success',
                title: '!Enhorabuena, has ganado! 🎉',
+               icon: 'success',
                showConfirmButton: false,
                timer: 3500
             });

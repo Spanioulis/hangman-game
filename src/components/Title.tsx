@@ -4,18 +4,20 @@ import { colors, dimensions } from '../styles';
 interface TitleProps {
    children?: string;
    color?: string;
+   margin?: string;
    size?: string;
    weight?: string;
 }
 const TitleStyle = styled.p<TitleProps>`
-   color: ${({ color }) => color || colors.font.base};
+   color: ${({ color }) => color || colors.font.logo};
    font-size: ${({ size }) => size || dimensions.font.h1};
    font-weight: ${({ weight }) => weight || 'normal'};
+   margin: ${({ margin }) => margin || '0rem'};
 `;
 
-const Title: React.FC<TitleProps> = ({ children, color, size, weight }) => {
+const Title: React.FC<TitleProps> = ({ children, color, size, weight, margin }) => {
    return (
-      <TitleStyle color={color} size={size} weight={weight}>
+      <TitleStyle color={color} margin={margin} size={size} weight={weight}>
          {children}
       </TitleStyle>
    );
