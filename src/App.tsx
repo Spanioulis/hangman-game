@@ -31,7 +31,7 @@ const TextStyle = styled(FlexBox)`
 
 const url = '../public/db.json';
 function App() {
-   const { loading, data } = useFetch(url);
+   const { isLoading, data } = useFetch(url);
    const { randomIndex } = useRandom(data);
 
    const [word, setWord] = useState('');
@@ -104,9 +104,11 @@ function App() {
          <GlobalStyle />
          <FlexBoxStyle>
             <Title size={dimensions.font.h1}>Hangman Game</Title>
-            <HangmanImage number={attempts} />
+            <div style={{ height: '125px' }}>
+               <HangmanImage number={attempts} />
+            </div>
             <TextStyle direction="row" margin="1rem 0rem rem 0rem">
-               {loading ? (
+               {isLoading ? (
                   <Spinner />
                ) : (
                   <Text color="#121212" size={dimensions.font.h3} weight="bold">
