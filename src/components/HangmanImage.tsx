@@ -1,26 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import hangman from '../assets/hagman.png';
+import { useState, useEffect } from 'react';
+// import hangman from '../assets/hagman.png';
 
 interface Props {
    number: number;
+   isLoading: boolean;
 }
 
-const HangmanImage = ({ number }: Props) => {
-   const [imageUrl, setImageUrl] = useState<string | undefined>(undefined);
-   const [isLoading, setIsLoading] = useState(true);
+const HangmanImage = ({ number, isLoading }: Props) => {
+   const [imageUrl, setImageUrl] = useState('');
 
    useEffect(() => {
-      async function getImageUrl() {
-         setIsLoading(true);
-         try {
-            let imageModule = await import(`../assets/${number}.png`);
-            setImageUrl(imageModule.default);
-         } catch (e) {
-            console.error(e);
-         } finally {
-            setIsLoading(false);
-         }
-      }
+      const getImageUrl = async () => {
+         let imageModule = await import(`../assets/${number}.png`);
+         setImageUrl(imageModule.default);
+      };
       getImageUrl();
    }, [number]);
 
