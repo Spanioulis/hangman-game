@@ -9,19 +9,21 @@ import Swal from 'sweetalert2';
 
 const FlexBoxStyle = styled(FlexBox)`
    height: 100vh;
-   margin: 0rem 18rem;
 
    @media (max-width: 600px) {
       margin: 0rem 1rem;
    }
    @media (min-width: 600px) {
-      margin: 0rem 2rem;
+      margin: 0rem 3rem;
+   }
+   @media (min-width: 768px) {
+      margin: 0rem 3rem;
    }
    @media (min-width: 992px) {
-      margin: 0rem 5rem;
+      margin: 0rem 10rem;
    }
    @media (min-width: 1200px) {
-      margin: 0rem 15rem;
+      margin: 0rem 22rem;
    }
 `;
 
