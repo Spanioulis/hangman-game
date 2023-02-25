@@ -104,9 +104,7 @@ function App() {
          <GlobalStyle />
          <FlexBoxStyle>
             <Title size={dimensions.font.h1}>Hangman Game</Title>
-            <div style={{ height: '125px' }}>
-               <HangmanImage number={attempts} />
-            </div>
+            <HangmanImage number={attempts} />
             <TextStyle direction="row" margin="1rem 0rem rem 0rem">
                {isLoading ? (
                   <Spinner />
