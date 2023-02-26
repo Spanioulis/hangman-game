@@ -31,7 +31,7 @@ const TextStyle = styled(FlexBox)`
    height: 2rem;
 `;
 
-const url = '../public/db.json';
+const url = './db.json';
 function App() {
    const { isLoading, data } = useFetch(url);
    const { randomIndex } = useRandom(data);
@@ -92,7 +92,7 @@ function App() {
       if (hiddenWord && hiddenWord.length > 0) {
          if (!hiddenWord.includes('_ ')) {
             Swal.fire({
-               title: '!Enhorabuena, has ganado! 🎉',
+               title: '¡Enhorabuena, has ganado! 🎉',
                icon: 'success',
                showConfirmButton: false,
                timer: 3500

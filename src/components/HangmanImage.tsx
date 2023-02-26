@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// import hangman from '../assets/hagman.png';
 
 interface Props {
    number: number;

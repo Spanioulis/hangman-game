@@ -21,11 +21,4 @@ const dimensions = {
    }
 };
 
-// H1 – 40 px
-// H2 – 34 px (6 menos)
-// H3 – 29 px (5 menos)
-// H4 – 24 px (5 menos)
-// H5 – 21 px (3 menos)
-// H6 – 18 px (3 menos)
-
 export default dimensions;
