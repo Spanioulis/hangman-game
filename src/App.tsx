@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Button, ButtonNext, HangmanImage, Spinner, Text, Title } from './components';
 import { useFetch, useRandom } from './hooks';
 import { letters } from './helpers';
+import data from './constants/data.js';
 
 import { dimensions, FlexBox, GlobalStyle } from './styles';
 import Swal from 'sweetalert2';
@@ -33,7 +34,7 @@ const TextStyle = styled(FlexBox)`
 
 const url = './db.json';
 function App() {
-   const { isLoading, data } = useFetch(url);
+   const { isLoading } = useFetch(url);
    const { randomIndex } = useRandom(data);
 
    const [word, setWord] = useState('');
