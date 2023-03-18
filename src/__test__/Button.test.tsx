@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { vi } from 'vitest';
 import Button from '../components/Button';
@@ -14,7 +15,7 @@ describe('Button', () => {
    });
 
    it('renders correctly', () => {
-      expect(screen.getByText('Testing Button')).toBeDefined();
+      expect(screen.getByText('Testing Button')).toBeInTheDocument();
    });
 
    it('correct button...', () => {

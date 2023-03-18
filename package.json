@@ -17,6 +17,7 @@
       "sweetalert2": "^11.7.2"
    },
    "devDependencies": {
+      "@testing-library/jest-dom": "^5.16.5",
       "@testing-library/react": "^14.0.0",
       "@types/node": "^18.14.1",
       "@types/react": "^18.0.27",
