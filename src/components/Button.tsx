@@ -1,22 +1,13 @@
 import styled from 'styled-components';
 import { colors } from '../styles';
 
-interface ButtonProps {
-   children: string;
+type TButton = {
+   children: React.ReactNode;
    value: string;
    onClick: (e: any) => void;
-}
+};
 
-// type ButtonProps = {
-//    value: string;
-//    onClick: (e: any) => void;
-// };
-
-// type MyButtonProps = {
-//    children: string;
-// } & ButtonProps;
-
-const ButtonStyle = styled.button<ButtonProps>`
+const ButtonStyle = styled.button<TButton>`
    background-color: ${colors.button.background};
    border-radius: 10px;
    border: none;
@@ -39,7 +30,7 @@ const ButtonStyle = styled.button<ButtonProps>`
    }
 `;
 
-const Button: React.FC<ButtonProps> = ({ children, value, onClick }) => {
+const Button = ({ children, value, onClick }: TButton) => {
    return (
       <ButtonStyle value={value} onClick={onClick}>
          {children}
