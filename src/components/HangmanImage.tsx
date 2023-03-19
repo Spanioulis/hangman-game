@@ -1,17 +1,21 @@
 import { useState, useEffect } from 'react';
 
-interface Props {
+type THangmanImage = {
    number: number;
    isLoading: boolean;
-}
+};
 
-const HangmanImage = ({ number, isLoading }: Props) => {
+const HangmanImage = ({ number, isLoading }: THangmanImage) => {
    const [imageUrl, setImageUrl] = useState('');
 
    useEffect(() => {
       const getImageUrl = async () => {
-         let imageModule = await import(`../assets/${number}.png`);
-         setImageUrl(imageModule.default);
+         try {
+            let imageModule = await import(`../assets/${number}.png`);
+            setImageUrl(imageModule.default);
+         } catch (error) {
+            console.log(error);
+         }
       };
       getImageUrl();
    }, [number]);
