@@ -4,13 +4,15 @@ import { vi } from 'vitest';
 import Button from '../components/Button';
 import { colors } from '../styles';
 
+const object = { name: 'Testing Button', label: 'prueba' };
+
 describe('Button', () => {
    const onClick = vi.fn();
 
    beforeEach(() => {
       render(
          <Button onClick={onClick} value="button">
-            Testing Button
+            {object.name}
          </Button>
       );
    });
@@ -30,23 +32,38 @@ describe('Button', () => {
       expect(onClick).toHaveBeenCalledTimes(1);
    });
 
-   // it('change the style when you hover over the button', async () => {
-   //    const button = screen.getByRole('button', { name: /testing button/i });
+   it('onClick function is passed with the correct type', () => {
+      fireEvent.click(screen.getByText(/button/i));
+      expect(onClick).toHaveBeenCalled();
+      expect(typeof onClick).toBe('function');
+   });
 
-   //    expect(button).toHaveStyle(`
-   //    background-color: ${colors.button.background};
-   //    color: ${colors.button.text};
-   //    `);
+   it('children is passed with the correct type', () => {
+      const button = screen.getByRole('button', { name: /testing button/i });
 
-   //    fireEvent.mouseOver(button);
+      expect(typeof button.children).toBe('object');
+   });
 
-   //    await waitFor(() => {
-   //       expect(button).toHaveStyle(`
-   //          background-color: #e7a127;
-   //          color: #824d30;
-   //       `);
-   //    });
-   // });
+   it('change the style when you hover over the button', () => {
+      const button = screen.getByRole('button', { name: /testing button/i });
+
+      expect(button).toHaveStyle(`
+      background-color: ${colors.button.background};
+      color: ${colors.button.text};
+      `);
+
+      fireEvent.mouseOver(button);
+
+      waitFor(
+         () => {
+            expect(button).toHaveStyle(`
+           background-color: ${colors.main};
+            color: ${colors.button.background};
+         `);
+         },
+         { timeout: 400 }
+      );
+   });
 
    it('renders with correct styles', () => {
       const button = screen.getByText('Testing Button');
