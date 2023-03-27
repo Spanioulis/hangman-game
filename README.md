@@ -43,6 +43,7 @@ Hangman Game is a project made with React & Typescript. The objective of it was 
 ## Goals for this project:
 
 - How to use [TypeScript](https://www.typescriptlang.org/)
+- How to use [Jest](https://jestjs.io/) & [React Testing Library](https://testing-library.com/)
 - How to use [Styled components](https://styled-components.com/)
 
 ### Technologies used:
@@ -55,6 +56,9 @@ Hangman Game is a project made with React & Typescript. The objective of it was 
     <a href="https://www.typescriptlang.org/">
     <img src="https://skillicons.dev/icons?i=typescript" alt="TypeScript JS Logo" />
   </a>
+  <a href="https://jestjs.io/">
+    <img src="https://skillicons.dev/icons?i=jest" alt="Jest Logo"/>
+  </a>
   <a href="https://styled-components.com/">
     <img src="https://skillicons.dev/icons?i=styledcomponents" />
   </a>
@@ -64,11 +68,11 @@ Hangman Game is a project made with React & Typescript. The objective of it was 
   <a href="https://git-scm.com/">
     <img src="https://skillicons.dev/icons?i=git" alt="Git Logo"/>
   </a></br>
-
 </p>
 
 - ReactJS (useEffect)
 - TypeScript
+- Jest & React Testing Library
 - Styled Components
 - Vite
 
