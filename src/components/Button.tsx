@@ -1,10 +1,11 @@
+import { SetStateAction } from 'react';
 import styled from 'styled-components';
 import { colors } from '../styles';
 
 type TButton = {
    children: React.ReactNode;
    value: string;
-   onClick: (e: any) => void;
+   onClick: () => void;
 };
 
 const ButtonStyle = styled.button<TButton>`

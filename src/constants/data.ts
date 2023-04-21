@@ -1,4 +1,6 @@
-const data = [
+import { TUseRandom } from '../hooks/useRandom';
+
+const data: TUseRandom[] = [
    {
       id: '1',
       value: 'abecedario'

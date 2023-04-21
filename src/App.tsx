@@ -42,8 +42,8 @@ function App() {
    const [attempts, setAttempts] = useState(0);
    const [hiddenWord, setHiddenWord] = useState('');
 
-   const handleClick = (e: any) => {
-      setCurrentLetter(e.target.value);
+   const handleClick = (letter: string) => {
+      setCurrentLetter(letter);
 
       if (!hiddenWord.includes('_')) {
          setAttempts(0);
@@ -110,7 +110,6 @@ function App() {
             <div style={{ height: '200px' }}>
                <HangmanImage number={attempts} isLoading={isLoading} />
             </div>
-
             <TextStyle direction="row" margin="1rem 0rem rem 0rem">
                {isLoading ? (
                   <Spinner />
@@ -120,17 +119,13 @@ function App() {
                   </Text>
                )}
             </TextStyle>
-
             <Text color="#121212" size={dimensions.font.h5} weight="semibold" margin="1rem 0rem 0rem 0rem">
                Intentos: {attempts}
             </Text>
-
-            {/* TODO -> Usar el componente 'Buttongroup.tsx' */}
-
             <FlexBox direction="row" wrap="wrap" margin="1rem 0rem 0rem 0rem">
                {letters.map((letter) => {
                   return (
-                     <Button value={letter} onClick={handleClick} key={letter}>
+                     <Button value={letter} onClick={() => handleClick(letter)} key={letter}>
                         {letter}
                      </Button>
                   );

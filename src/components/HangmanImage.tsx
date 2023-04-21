@@ -11,7 +11,7 @@ const HangmanImage = ({ number, isLoading }: THangmanImage) => {
    useEffect(() => {
       const getImageUrl = async () => {
          try {
-            let imageModule = await import(`../assets/${number}.png`);
+            const imageModule = await import(`../assets/${number}.png`);
             setImageUrl(imageModule.default);
          } catch (error) {
             console.log(error);

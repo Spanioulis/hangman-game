@@ -1,9 +1,10 @@
-interface Props {
-   length: number;
-}
+export type TUseRandom = {
+   id: string;
+   value: string;
+};
 
-const useRandom = (arr: any) => {
-   let randomIndex = Math.floor(Math.random() * arr.length);
+const useRandom = (arr: TUseRandom[]): { randomIndex: number } => {
+   const randomIndex = Math.floor(Math.random() * arr.length);
    return { randomIndex };
 };
 
