@@ -4,7 +4,7 @@ import { colors } from '../styles';
 interface ButtonProps {
    children: string;
    value: string;
-   onClick: (e: any) => void;
+   onClick: () => void;
 }
 
 const ButtonStyle = styled.button<ButtonProps>`
