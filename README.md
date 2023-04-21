@@ -83,3 +83,8 @@ Hangman Game is a project made with React & Typescript. The objective of it was 
 Spanioulis (Sergio Paniagua Sánchez) - [Linkedin](https://www.linkedin.com/in/sergio-paniagua-sanchez/) - pani77sps@gmail.com
 
 Project Link: [https://github.com/Spanioulis/hangman-game](https://github.com/Spanioulis/hangman-game)
+
+## Code quality
+
+![hangman-codefactor](https://user-images.githubusercontent.com/97700906/233685552-88d16629-4695-4782-875a-d3f0b3b68b2c.PNG)
+
