@@ -17,11 +17,11 @@ const HangmanImage = ({ number, isLoading }: THangmanImage) => {
             console.log(error);
          }
       };
-      getImageUrl();
+      getImageUrl().catch((error) => console.log(error));
    }, [number]);
 
    if (isLoading) {
-      return <p></p>;
+      return <p>Is loading...</p>;
    }
 
    return <img src={imageUrl} alt="Hangman image" width="125px" />;
