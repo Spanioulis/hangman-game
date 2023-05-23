@@ -1,15 +1,17 @@
-import { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import { useEffect, useMemo, useState } from 'react';
+import styled, { ThemeProvider } from 'styled-components';
 import { Button, ButtonNext, HangmanImage, Spinner, Text, Title } from './components';
-import { useFetch, useRandom } from './hooks';
+import { useFetch, useRandom, useThemeMode } from './hooks';
 import { letters } from './helpers';
 import data from './constants/data.js';
 
 import { dimensions, FlexBox, GlobalStyle } from './styles';
 import Swal from 'sweetalert2';
+import themes, { ThemeColors } from './styles/themes';
 
 const FlexBoxStyle = styled(FlexBox)`
-   height: 100vh;
+   margin-top: 3rem;
+   height: 95vh;
 
    @media (max-width: 600px) {
       margin: 0rem 1rem;
@@ -33,6 +35,7 @@ const TextStyle = styled(FlexBox)`
 `;
 
 const url = './db.json';
+
 function App() {
    const { isLoading } = useFetch(url);
    const { randomIndex } = useRandom(data);
@@ -41,6 +44,10 @@ function App() {
    const [currentLetter, setCurrentLetter] = useState('');
    const [attempts, setAttempts] = useState(0);
    const [hiddenWord, setHiddenWord] = useState('');
+
+   const [theme, toggleTheme] = useThemeMode();
+   const themeKey: keyof ThemeColors = theme as keyof ThemeColors;
+   const themeMemo = useMemo(() => themes[themeKey], [themeKey]);
 
    const handleClick = (letter: string) => {
       setCurrentLetter(letter);
@@ -103,9 +110,15 @@ function App() {
    }, [hiddenWord]);
 
    return (
-      <>
+      <ThemeProvider theme={themeMemo}>
          <GlobalStyle />
          <FlexBoxStyle>
+            <FlexBox direction="row" style={{ marginTop: '2rem' }}>
+               <button onClick={() => toggleTheme('summer')}>Summer</button>
+               <button onClick={() => toggleTheme('default')}>Spring</button>
+               <button onClick={() => toggleTheme('autumn')}>Autumn</button>
+               <button onClick={() => toggleTheme('winter')}>Winter</button>
+            </FlexBox>
             <Title size={dimensions.font.h1}>Hangman Game</Title>
             <div style={{ height: '200px' }}>
                <HangmanImage number={attempts} isLoading={isLoading} />
@@ -135,7 +148,7 @@ function App() {
                NUEVA PARTIDA
             </ButtonNext>
          </FlexBoxStyle>
-      </>
+      </ThemeProvider>
    );
 }
 

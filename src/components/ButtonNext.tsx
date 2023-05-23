@@ -8,11 +8,11 @@ interface ButtonProps {
 }
 
 const ButtonStyle = styled.button<ButtonProps>`
-   background-color: ${colors.font.logo};
+   background-color: ${({ theme }) => theme.colors.nextButton};
    border-radius: 10px;
    border: none;
    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-   color: ${colors.button.text};
+   color: ${({ theme }) => theme.colors.text};
    cursor: pointer;
    font-weight: bolder;
    margin-top: 1rem;
@@ -23,9 +23,9 @@ const ButtonStyle = styled.button<ButtonProps>`
    width: fit-content;
 
    :hover {
-      background-color: ${colors.main};
+      background-color: ${({ theme }) => theme.colors.button};
       box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
-      color: ${colors.button.background};
+      color: ${({ theme }) => theme.colors.nextButton};
       font-weight: bolder;
       transform: translateY(-2px);
    }

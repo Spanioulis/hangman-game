@@ -8,11 +8,11 @@ type TButton = {
 };
 
 const ButtonStyle = styled.button<TButton>`
-   background-color: ${colors.button.background};
+   background-color: ${({ theme }) => theme.colors.button};
    border-radius: 10px;
    border: none;
    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-   color: ${colors.button.text};
+   color: ${({ theme }) => theme.colors.text};
    cursor: pointer;
    font-weight: bolder;
    padding: 10px 10px;
@@ -22,9 +22,9 @@ const ButtonStyle = styled.button<TButton>`
    width: 3rem;
 
    :hover {
-      background-color: ${colors.main};
+      background-color: ${({ theme }) => theme.colors.nextButton};
       box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
-      color: ${colors.button.background};
+      color: ${({ theme }) => theme.colors.text};
       font-weight: bolder;
       transform: translateY(-2px);
    }

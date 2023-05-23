@@ -9,7 +9,7 @@ interface TitleProps {
    weight?: string;
 }
 const TitleStyle = styled.p<TitleProps>`
-   color: ${({ color }) => color || colors.font.logo};
+   color: ${({ theme }) => theme.colors.button};
    font-size: ${({ size }) => size || dimensions.font.h1};
    font-weight: ${({ weight }) => weight || 'normal'};
    margin: ${({ margin }) => margin || '0rem'};
